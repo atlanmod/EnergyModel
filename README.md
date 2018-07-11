@@ -112,3 +112,9 @@ The two red boxes represent the instantiations of the test class for the two tes
 Finally the blue box represents the execution of the second test case `testApp2`, with the energy consumed by `testApp2` method, `App.init` and `App.method`.
 
 ### Querying the Model 
+
+The current state of the code queries the model using standard Java functions. Later updates will provide support for OCL and EOL queries. 
+
+The `App#getIndividualMethodEnergy` method iterates over the relationship between `CollectiveMeasurement` in order to get the energy consumed by a specific method, independently of the methods that has been called inside. 
+
+For instance, running it on the `CollectiveMeasurement` characterizing `AppTest$testApp` method would show that `testApp` consumed 11963 microJoules, but 8728 microJoules individually, once the consumptions of `App$<init>` and `App$method` are deduced.
