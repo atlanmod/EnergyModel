@@ -108,4 +108,7 @@ The EnergyBehavior class analyses the traces and generates the SMM model with it
 
 ![](pics/smmmodel.png?raw=true "SMM Model")
 
+The two red boxes represent the instantiations of the test class for the two test methods `testApp` and `testApp2`. The green box is the execution of the `testApp` test case, with the energy consumed by `testApp`, `App$init` and `App.method`. 
+Finally the blue box represents the execution of the second test case `testApp2`, with the energy consumed by `testApp2` method, `App.init` and `App.method`.
+
 ### Querying the Model 
