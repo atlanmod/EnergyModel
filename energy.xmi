@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ASCII"?>
+<smm:SmmModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:smm="http://www.atlanmod.org/zoo/smm">
+  <libraries>
+    <measureElements xsi:type="smm:CollectiveMeasure" outRelationships="//@libraries.0/@measureElements.0/@measureRelationships.1 //@libraries.0/@measureElements.0/@measureRelationships.0">
+      <measureRelationships xsi:type="smm:BaseNMeasureRelationship" name="collectToTimeMeasure" to="//@libraries.0/@measureElements.2" from="//@libraries.0/@measureElements.0"/>
+      <measureRelationships xsi:type="smm:BaseNMeasureRelationship" name="collectToEnergyMeasure" to="//@libraries.0/@measureElements.1" from="//@libraries.0/@measureElements.0"/>
+    </measureElements>
+    <measureElements xsi:type="smm:DirectMeasure" name="energy" inRelationships="//@libraries.0/@measureElements.0/@measureRelationships.1" unit="//@libraries.0/@measureElements.3"/>
+    <measureElements xsi:type="smm:DirectMeasure" name="duration" inRelationships="//@libraries.0/@measureElements.0/@measureRelationships.0" unit="//@libraries.0/@measureElements.4"/>
+    <measureElements xsi:type="smm:UnitOfMeasure" name="uj" description="MicroJoule energy unit"/>
+    <measureElements xsi:type="smm:UnitOfMeasure" name="ns" description="Nanoseconds time duration"/>
+  </libraries>
+  <observations>
+    <observedMeasures measure="//@libraries.0/@measureElements.0">
+      <measurements xsi:type="smm:CollectiveMeasurement" name="com.tblf.SimpleProject.AppTest$&lt;init>" outRelationships="//@observations.0/@observedMeasures.0/@measurements.0/@measurementRelationships.0 //@observations.0/@observedMeasures.0/@measurements.0/@measurementRelationships.1">
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="energy" to="//@observations.0/@observedMeasures.0/@measurements.1" from="//@observations.0/@observedMeasures.0/@measurements.0"/>
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="duration" to="//@observations.0/@observedMeasures.0/@measurements.2" from="//@observations.0/@observedMeasures.0/@measurements.0"/>
+      </measurements>
+      <measurements xsi:type="smm:DirectMeasurement" name="energy" inRelationships="//@observations.0/@observedMeasures.0/@measurements.0/@measurementRelationships.0" value="2197.0"/>
+      <measurements xsi:type="smm:DirectMeasurement" name="duration" inRelationships="//@observations.0/@observedMeasures.0/@measurements.0/@measurementRelationships.1" value="148228.0"/>
+    </observedMeasures>
+    <observedMeasures measure="//@libraries.0/@measureElements.0">
+      <measurements xsi:type="smm:CollectiveMeasurement" name="com.tblf.SimpleProject.AppTest$testApp" outRelationships="//@observations.0/@observedMeasures.1/@measurements.0/@measurementRelationships.0 //@observations.0/@observedMeasures.1/@measurements.0/@measurementRelationships.1 //@observations.0/@observedMeasures.2/@measurements.0/@measurementRelationships.0 //@observations.0/@observedMeasures.3/@measurements.0/@measurementRelationships.0" baseMeasurementTo="//@observations.0/@observedMeasures.2/@measurements.0/@measurementRelationships.0 //@observations.0/@observedMeasures.3/@measurements.0/@measurementRelationships.0">
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="energy" to="//@observations.0/@observedMeasures.1/@measurements.1" from="//@observations.0/@observedMeasures.1/@measurements.0"/>
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="duration" to="//@observations.0/@observedMeasures.1/@measurements.2" from="//@observations.0/@observedMeasures.1/@measurements.0"/>
+        <measurand href="src/test/resources/SimpleProject/SimpleProject_java.xmi#//@ownedElements.0/@ownedPackages.0/@ownedPackages.0/@ownedElements.0/@bodyDeclarations.0"/>
+      </measurements>
+      <measurements xsi:type="smm:DirectMeasurement" name="energy" inRelationships="//@observations.0/@observedMeasures.1/@measurements.0/@measurementRelationships.0" value="11963.0"/>
+      <measurements xsi:type="smm:DirectMeasurement" name="duration" inRelationships="//@observations.0/@observedMeasures.1/@measurements.0/@measurementRelationships.1" value="1303107.0"/>
+    </observedMeasures>
+    <observedMeasures measure="//@libraries.0/@measureElements.0">
+      <measurements xsi:type="smm:CollectiveMeasurement" name="com.tblf.SimpleProject.App$&lt;init>" inRelationships="//@observations.0/@observedMeasures.2/@measurements.0/@measurementRelationships.0" outRelationships="//@observations.0/@observedMeasures.2/@measurements.0/@measurementRelationships.1 //@observations.0/@observedMeasures.2/@measurements.0/@measurementRelationships.2" baseMeasurementFrom="//@observations.0/@observedMeasures.2/@measurements.0/@measurementRelationships.0">
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="call" to="//@observations.0/@observedMeasures.2/@measurements.0" from="//@observations.0/@observedMeasures.1/@measurements.0"/>
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="energy" to="//@observations.0/@observedMeasures.2/@measurements.1" from="//@observations.0/@observedMeasures.2/@measurements.0"/>
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="duration" to="//@observations.0/@observedMeasures.2/@measurements.2" from="//@observations.0/@observedMeasures.2/@measurements.0"/>
+        <measurand href="src/test/resources/SimpleProject/SimpleProject_java.xmi#//@ownedElements.0/@ownedPackages.0/@ownedPackages.0/@ownedElements.2/@bodyDeclarations.1"/>
+      </measurements>
+      <measurements xsi:type="smm:DirectMeasurement" name="energy" inRelationships="//@observations.0/@observedMeasures.2/@measurements.0/@measurementRelationships.1" value="1648.0"/>
+      <measurements xsi:type="smm:DirectMeasurement" name="duration" inRelationships="//@observations.0/@observedMeasures.2/@measurements.0/@measurementRelationships.2" value="158468.0"/>
+    </observedMeasures>
+    <observedMeasures measure="//@libraries.0/@measureElements.0">
+      <measurements xsi:type="smm:CollectiveMeasurement" name="com.tblf.SimpleProject.App$method" inRelationships="//@observations.0/@observedMeasures.3/@measurements.0/@measurementRelationships.0" outRelationships="//@observations.0/@observedMeasures.3/@measurements.0/@measurementRelationships.1 //@observations.0/@observedMeasures.3/@measurements.0/@measurementRelationships.2" baseMeasurementFrom="//@observations.0/@observedMeasures.3/@measurements.0/@measurementRelationships.0">
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="call" to="//@observations.0/@observedMeasures.3/@measurements.0" from="//@observations.0/@observedMeasures.1/@measurements.0"/>
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="energy" to="//@observations.0/@observedMeasures.3/@measurements.1" from="//@observations.0/@observedMeasures.3/@measurements.0"/>
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="duration" to="//@observations.0/@observedMeasures.3/@measurements.2" from="//@observations.0/@observedMeasures.3/@measurements.0"/>
+        <measurand href="src/test/resources/SimpleProject/SimpleProject_java.xmi#//@ownedElements.0/@ownedPackages.0/@ownedPackages.0/@ownedElements.2/@bodyDeclarations.2"/>
+      </measurements>
+      <measurements xsi:type="smm:DirectMeasurement" name="energy" inRelationships="//@observations.0/@observedMeasures.3/@measurements.0/@measurementRelationships.1" value="1587.0"/>
+      <measurements xsi:type="smm:DirectMeasurement" name="duration" inRelationships="//@observations.0/@observedMeasures.3/@measurements.0/@measurementRelationships.2" value="107233.0"/>
+    </observedMeasures>
+    <observedMeasures measure="//@libraries.0/@measureElements.0">
+      <measurements xsi:type="smm:CollectiveMeasurement" name="com.tblf.SimpleProject.AppTest$&lt;init>" outRelationships="//@observations.0/@observedMeasures.4/@measurements.0/@measurementRelationships.0 //@observations.0/@observedMeasures.4/@measurements.0/@measurementRelationships.1">
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="energy" to="//@observations.0/@observedMeasures.4/@measurements.1" from="//@observations.0/@observedMeasures.4/@measurements.0"/>
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="duration" to="//@observations.0/@observedMeasures.4/@measurements.2" from="//@observations.0/@observedMeasures.4/@measurements.0"/>
+      </measurements>
+      <measurements xsi:type="smm:DirectMeasurement" name="energy" inRelationships="//@observations.0/@observedMeasures.4/@measurements.0/@measurementRelationships.0" value="1159.0"/>
+      <measurements xsi:type="smm:DirectMeasurement" name="duration" inRelationships="//@observations.0/@observedMeasures.4/@measurements.0/@measurementRelationships.1" value="107777.0"/>
+    </observedMeasures>
+    <observedMeasures measure="//@libraries.0/@measureElements.0">
+      <measurements xsi:type="smm:CollectiveMeasurement" name="com.tblf.SimpleProject.AppTest$testApp2" outRelationships="//@observations.0/@observedMeasures.5/@measurements.0/@measurementRelationships.0 //@observations.0/@observedMeasures.5/@measurements.0/@measurementRelationships.1 //@observations.0/@observedMeasures.6/@measurements.0/@measurementRelationships.0 //@observations.0/@observedMeasures.7/@measurements.0/@measurementRelationships.0" baseMeasurementTo="//@observations.0/@observedMeasures.6/@measurements.0/@measurementRelationships.0 //@observations.0/@observedMeasures.7/@measurements.0/@measurementRelationships.0">
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="energy" to="//@observations.0/@observedMeasures.5/@measurements.1" from="//@observations.0/@observedMeasures.5/@measurements.0"/>
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="duration" to="//@observations.0/@observedMeasures.5/@measurements.2" from="//@observations.0/@observedMeasures.5/@measurements.0"/>
+        <measurand href="src/test/resources/SimpleProject/SimpleProject_java.xmi#//@ownedElements.0/@ownedPackages.0/@ownedPackages.0/@ownedElements.0/@bodyDeclarations.1"/>
+      </measurements>
+      <measurements xsi:type="smm:DirectMeasurement" name="energy" inRelationships="//@observations.0/@observedMeasures.5/@measurements.0/@measurementRelationships.0" value="8240.0"/>
+      <measurements xsi:type="smm:DirectMeasurement" name="duration" inRelationships="//@observations.0/@observedMeasures.5/@measurements.0/@measurementRelationships.1" value="756393.0"/>
+    </observedMeasures>
+    <observedMeasures measure="//@libraries.0/@measureElements.0">
+      <measurements xsi:type="smm:CollectiveMeasurement" name="com.tblf.SimpleProject.App$&lt;init>" inRelationships="//@observations.0/@observedMeasures.6/@measurements.0/@measurementRelationships.0" outRelationships="//@observations.0/@observedMeasures.6/@measurements.0/@measurementRelationships.1 //@observations.0/@observedMeasures.6/@measurements.0/@measurementRelationships.2" baseMeasurementFrom="//@observations.0/@observedMeasures.6/@measurements.0/@measurementRelationships.0">
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="call" to="//@observations.0/@observedMeasures.6/@measurements.0" from="//@observations.0/@observedMeasures.5/@measurements.0"/>
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="energy" to="//@observations.0/@observedMeasures.6/@measurements.1" from="//@observations.0/@observedMeasures.6/@measurements.0"/>
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="duration" to="//@observations.0/@observedMeasures.6/@measurements.2" from="//@observations.0/@observedMeasures.6/@measurements.0"/>
+        <measurand href="src/test/resources/SimpleProject/SimpleProject_java.xmi#//@ownedElements.0/@ownedPackages.0/@ownedPackages.0/@ownedElements.2/@bodyDeclarations.1"/>
+      </measurements>
+      <measurements xsi:type="smm:DirectMeasurement" name="energy" inRelationships="//@observations.0/@observedMeasures.6/@measurements.0/@measurementRelationships.1" value="1770.0"/>
+      <measurements xsi:type="smm:DirectMeasurement" name="duration" inRelationships="//@observations.0/@observedMeasures.6/@measurements.0/@measurementRelationships.2" value="170155.0"/>
+    </observedMeasures>
+    <observedMeasures measure="//@libraries.0/@measureElements.0">
+      <measurements xsi:type="smm:CollectiveMeasurement" name="com.tblf.SimpleProject.App$method" inRelationships="//@observations.0/@observedMeasures.7/@measurements.0/@measurementRelationships.0" outRelationships="//@observations.0/@observedMeasures.7/@measurements.0/@measurementRelationships.1 //@observations.0/@observedMeasures.7/@measurements.0/@measurementRelationships.2" baseMeasurementFrom="//@observations.0/@observedMeasures.7/@measurements.0/@measurementRelationships.0">
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="call" to="//@observations.0/@observedMeasures.7/@measurements.0" from="//@observations.0/@observedMeasures.5/@measurements.0"/>
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="energy" to="//@observations.0/@observedMeasures.7/@measurements.1" from="//@observations.0/@observedMeasures.7/@measurements.0"/>
+        <measurementRelationships xsi:type="smm:BaseNMeasurementRelationship" name="duration" to="//@observations.0/@observedMeasures.7/@measurements.2" from="//@observations.0/@observedMeasures.7/@measurements.0"/>
+        <measurand href="src/test/resources/SimpleProject/SimpleProject_java.xmi#//@ownedElements.0/@ownedPackages.0/@ownedPackages.0/@ownedElements.2/@bodyDeclarations.2"/>
+      </measurements>
+      <measurements xsi:type="smm:DirectMeasurement" name="energy" inRelationships="//@observations.0/@observedMeasures.7/@measurements.0/@measurementRelationships.1" value="1892.0"/>
+      <measurements xsi:type="smm:DirectMeasurement" name="duration" inRelationships="//@observations.0/@observedMeasures.7/@measurements.0/@measurementRelationships.2" value="189135.0"/>
+    </observedMeasures>
+  </observations>
+</smm:SmmModel>

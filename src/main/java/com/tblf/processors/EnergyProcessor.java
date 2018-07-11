@@ -7,10 +7,10 @@ import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.commons.AdviceAdapter;
 
-public class ClassProcessor extends ClassVisitor {
+public class EnergyProcessor extends ClassVisitor {
     private String className;
 
-    public ClassProcessor() {
+    public EnergyProcessor() {
         super(Opcodes.ASM5);
     }
 
@@ -47,12 +47,9 @@ public class ClassProcessor extends ClassVisitor {
 
             @Override
             protected void onMethodExit(int opcode) {
-
-                //mv.visitFieldInsn(Opcodes.GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
                 mv.visitVarInsn(Opcodes.ALOAD, value);
                 mv.visitLdcInsn(className + "$" + name);
                 mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "com/tblf/monitor/RAPLMonitor", "report", "(Ljava/lang/String;)V", false);
-
                 super.onMethodExit(opcode);
             }
         };

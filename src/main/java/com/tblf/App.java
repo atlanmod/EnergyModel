@@ -7,7 +7,7 @@ import com.tblf.junitrunner.MavenRunner;
 import com.tblf.parsing.TraceType;
 import com.tblf.parsing.parsers.Parser;
 import com.tblf.parsing.traceReaders.TraceFileReader;
-import com.tblf.processors.ClassProcessor;
+import com.tblf.processors.EnergyProcessor;
 import com.tblf.utils.Configuration;
 import com.tblf.utils.ModelUtils;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -41,7 +41,7 @@ public class App {
 
         analysisLauncher.registerDependencies(Collections.singletonList(new File("pom.xml")));
 
-        analysisLauncher.registerProcessor(new ClassProcessor());
+        analysisLauncher.registerProcessor(new EnergyProcessor());
 
         analysisLauncher.applyAfter(file1 -> {
             File trace = new File(file1, Configuration.getProperty("traceFile"));
